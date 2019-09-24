@@ -3,7 +3,12 @@ package org.joost.games.mazegame.entities;
 import static org.joost.games.mazegame.entities.Direction.*;
 
 public abstract class Npc extends Deelnemer {
-
+    @Override
+    public String toString() {
+        return "{damage=" + damage +
+                ", health=" + health +
+                '}';
+    }
 
     @Override
     public boolean move( Direction direction ) {

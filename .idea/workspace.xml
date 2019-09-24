@@ -3,15 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="761f4edf-36c2-4c59-88a3-f432137c38eb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Field.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Foe.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Foe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Friend.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Friend.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Npc.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Npc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Tile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Field.class" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Field.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Foe.class" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Foe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Friend.class" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Friend.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Npc.class" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Npc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Tile.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simple_gui/src/main/java/org/joost/games/mazegame/simple_gui/GameInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/simple_gui/src/main/java/org/joost/games/mazegame/simple_gui/GameInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_gui/src/main/java/org/joost/games/mazegame/simple_gui/TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/simple_gui/src/main/java/org/joost/games/mazegame/simple_gui/TODO.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simple_gui/target/classes/org/joost/games/mazegame/simple_gui/GameInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/simple_gui/target/classes/org/joost/games/mazegame/simple_gui/GameInput.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -165,7 +163,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1568966746251</updated>
-      <workItem from="1568966750229" duration="42442000" />
+      <workItem from="1568966750229" duration="43137000" />
     </task>
     <task id="LOCAL-00001" summary="een poging de friends en foes random te laten bewegen. werk nog niet. wel een deelnemer-class gemaakt, waar alle deelnemers van erven">
       <created>1569333361945</created>
@@ -188,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569333583788</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="de friends en foes bewegen random!">
+      <created>1569334379225</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1569334379225</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,6 +212,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="een poging de friends en foes random te laten bewegen. werk nog niet. wel een deelnemer-class gemaakt, waar alle deelnemers van erven" />
-    <option name="LAST_COMMIT_MESSAGE" value="een poging de friends en foes random te laten bewegen. werk nog niet. wel een deelnemer-class gemaakt, waar alle deelnemers van erven" />
+    <MESSAGE value="de friends en foes bewegen random!" />
+    <option name="LAST_COMMIT_MESSAGE" value="de friends en foes bewegen random!" />
   </component>
 </project>

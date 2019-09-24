@@ -67,5 +67,6 @@ public abstract class Tile {
     // doet nog niks, omdat de npcs nog niet bewegen
     void removeNpc() {
         this.npc = null;
+
     }
 }

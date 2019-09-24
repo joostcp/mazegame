@@ -6,7 +6,6 @@ public abstract class Deelnemer implements Moveable {
     int damage;
     int health;
 
-
     abstract String getChar();
 
     public int getHealth() {

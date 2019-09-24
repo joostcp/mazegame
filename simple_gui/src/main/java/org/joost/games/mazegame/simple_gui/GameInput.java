@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 import org.joost.games.mazegame.entities.Field;
 import org.joost.games.mazegame.entities.FinishedListener;
+import org.joost.games.mazegame.entities.Npc;
 
 public class GameInput implements FinishedListener {
 
@@ -28,6 +29,13 @@ public class GameInput implements FinishedListener {
         while (!finished) {
 
             System.out.println( field.toString() );
+            System.out.println("---");
+            for (Npc npc : field.npcs )
+                  {
+                      System.out.println((field.npcs.indexOf( npc )+1)+ ": " +npc.toString() );
+
+            }
+            System.out.println("---");
             System.out.println( "health: " + field.player.getHealth() + "/" + field.player.getMaxHealth() );
             System.out.println( "geef uw input: " );
             // de scanner herkent vier karakters als input: WSAD voor noord/zuid/west/oost
