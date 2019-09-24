@@ -30,7 +30,7 @@ public class GameInput implements FinishedListener {
         while (!finished) {
 
             System.out.println( field.toString() );
-            System.out.println( "health: " + field.player.getHealth() +"/"+ field.player.getMaxHealth());
+            System.out.println( "health: " + field.player.getHealth() + "/" + field.player.getMaxHealth() );
             System.out.println( "geef uw input: " );
             // de scanner herkent vier karakters als input: WSAD voor noord/zuid/west/oost
             // bij een andere input, of als de gevraagde rchting niet kan (ivm block) wordt de speler daarop gewezen
@@ -56,13 +56,17 @@ public class GameInput implements FinishedListener {
                 }
             }
 
+            boolean alleNpcsBewogen = false;
+            while (!alleNpcsBewogen) {
 
-//            for (int i=0;i<field.npcs.size();i++) {
-//                while (!moveNPC( field.npcs.get( i ))) {
-//                }
-//            }
+
+                for (int i = 0; i < field.npcs.size(); i++) {
+                    while (!moveNPC( field.npcs.get( i ) )) {
+                    }
+                }
+            }
         }
-        System.out.println("FINISHED!");
+        System.out.println( "FINISHED!" );
     }
 
     // todo nog beschrijven
@@ -72,25 +76,25 @@ public class GameInput implements FinishedListener {
     }
 
     private boolean moveNPC(
-            Npc npc) {
-        int rand = (int)(Math.random() * 4) + 1;
-        Direction dir=null;
-        switch (rand){
+            Npc npc ) {
+        int rand = (int) (Math.random() * 4) + 1;
+        Direction dir = null;
+        switch (rand) {
             case 1:
-                dir=NORTH;
+                dir = NORTH;
                 break;
             case 2:
-                dir=EAST;
+                dir = EAST;
                 break;
             case 3:
-                dir=SOUTH;
+                dir = SOUTH;
                 break;
             case 4:
-                dir=WEST;
+                dir = WEST;
                 break;
         }
         try {
-            if (npc.move( dir )){
+            if (npc.move( dir )) {
                 return true;
             }
         } catch (ArrayIndexOutOfBoundsException e) {
