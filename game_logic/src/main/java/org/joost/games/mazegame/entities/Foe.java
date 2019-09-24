@@ -4,8 +4,10 @@ public class Foe extends Npc {
 
     public static final String NAME = "b";
 
+
     public Foe() {
-        this.damage=15;
+        this.health = 25;
+        this.damage = 15;
     }
 
     // het symbool voor een foe op de kaart

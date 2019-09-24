@@ -4,8 +4,10 @@ import static org.joost.games.mazegame.entities.Direction.*;
 
 import java.util.Scanner;
 
+import org.joost.games.mazegame.entities.Direction;
 import org.joost.games.mazegame.entities.Field;
 import org.joost.games.mazegame.entities.FinishedListener;
+import org.joost.games.mazegame.entities.Npc;
 
 public class GameInput implements FinishedListener {
 
@@ -53,6 +55,12 @@ public class GameInput implements FinishedListener {
                     System.out.println( "dat gaat niet" );
                 }
             }
+
+
+//            for (int i=0;i<field.npcs.size();i++) {
+//                while (!moveNPC( field.npcs.get( i ))) {
+//                }
+//            }
         }
         System.out.println("FINISHED!");
     }
@@ -61,5 +69,34 @@ public class GameInput implements FinishedListener {
     @Override
     public void finished( boolean hasWon ) {
         this.finished = true;
+    }
+
+    private boolean moveNPC(
+            Npc npc) {
+        int rand = (int)(Math.random() * 4) + 1;
+        Direction dir=null;
+        switch (rand){
+            case 1:
+                dir=NORTH;
+                break;
+            case 2:
+                dir=EAST;
+                break;
+            case 3:
+                dir=SOUTH;
+                break;
+            case 4:
+                dir=WEST;
+                break;
+        }
+        try {
+            if (npc.move( dir )){
+                return true;
+            }
+        } catch (ArrayIndexOutOfBoundsException e) {
+
+        }
+        return false;
+
     }
 }

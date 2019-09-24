@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="761f4edf-36c2-4c59-88a3-f432137c38eb" name="Default Changelist" comment="" />
+    <list default="true" id="761f4edf-36c2-4c59-88a3-f432137c38eb" name="Default Changelist" comment="een poging de friends en foes random te laten bewegen. werk nog niet. wel een deelnemer-class gemaakt, waar alle deelnemers van erven">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Moveable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Field.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Foe.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Foe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Friend.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Friend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Npc.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Npc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Field$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Field$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Field.class" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Field.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Foe.class" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Foe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Friend.class" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Friend.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Npc.class" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Npc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Player$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Player$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_gui/src/main/java/org/joost/games/mazegame/simple_gui/GameInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/simple_gui/src/main/java/org/joost/games/mazegame/simple_gui/GameInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_gui/target/classes/org/joost/games/mazegame/simple_gui/GameInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/simple_gui/target/classes/org/joost/games/mazegame/simple_gui/GameInput.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,9 +32,18 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -35,12 +63,14 @@
     </option>
   </component>
   <component name="ProjectId" id="1R5pKQjDQtee8v9gaA6X3GlE2TM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/simple_gui/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -48,6 +78,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.joost.games.mazegame.entities" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="org.joost.games.mazegame.entities" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
@@ -124,6 +157,8 @@
         <item itemvalue="Application.Game" />
         <item itemvalue="JUnit.FieldTest.doTest" />
         <item itemvalue="JUnit.FieldTest" />
+        <item itemvalue="Application.Game" />
+        <item itemvalue="JUnit.FieldTest.doTest" />
       </list>
     </recent_temporary>
   </component>
@@ -137,11 +172,26 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1568966746251</updated>
-      <workItem from="1568966750229" duration="33209000" />
+      <workItem from="1568966750229" duration="41448000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="een poging de friends en foes random te laten bewegen. werk nog niet. wel een deelnemer-class gemaakt, waar alle deelnemers van erven" />
+    <option name="LAST_COMMIT_MESSAGE" value="een poging de friends en foes random te laten bewegen. werk nog niet. wel een deelnemer-class gemaakt, waar alle deelnemers van erven" />
   </component>
 </project>

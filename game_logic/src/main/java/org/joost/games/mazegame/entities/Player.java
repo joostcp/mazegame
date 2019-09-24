@@ -1,13 +1,14 @@
 package org.joost.games.mazegame.entities;
 
-public class Player {
+public class Player extends Deelnemer {
 
-    Tile tile;
-    private int health = 50;
-    private int maxHealth = 100;
+    public static final String NAME = "p";
+    private int maxHealth;
 
-    public int getHealth() {
-        return health;
+    public Player() {
+        this.health = 75;
+        this.maxHealth = 100;
+        this.damage = 10;
     }
 
     public int getMaxHealth() {
@@ -18,6 +19,7 @@ public class Player {
     // als dat zo is: leegmaken van het spelerattribuut van de huidige tile
     // het tile-attribuut van de speler vullen met de doeltile
     // het spelerattribuut van de doeltile vullen met de speler
+    @Override
     public boolean move( Direction direction ) {
         switch (direction) {
             case NORTH:
@@ -60,11 +62,12 @@ public class Player {
     }
 
     // het spelersymbool in de maze
+    @Override
     String getChar() {
-        return "p";
+        return NAME;
     }
 
-    // als we een vriend ontmnoeten, gaat de energie omhoog, tot de maximale energie.
+    // als we een vriend ontmoeten, gaat de energie omhoog, tot de maximale energie.
     // als we een vijand ontmoeten gaat er energie af, tot de dood erop volgt
     // geeft true terug als er, na aftrek van de damage van de meegegeven npc, nog health boven nul overblijft
     // geeft false terug als de health kleiner of gelijk is aan nul

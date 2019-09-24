@@ -15,6 +15,7 @@ public class Field implements FinishedListener {
     public Player player = new Player();
     private int maxX;
     private int maxY;
+    public ArrayList<Npc> npcs = new ArrayList<>(  );
 
     // todo nog beschrijven
     public void add( List<Tile> tiles ) {
@@ -125,11 +126,13 @@ public class Field implements FinishedListener {
             Npc npc = new Foe();
             while (!putNpc( npc, rnd )) {
             }
+            npcs.add( npc );
         }
         for (int i = 0; i < numberFriend; i++) {
             Npc npc = new Friend();
             while (!putNpc( npc, rnd )) {
             }
+            npcs.add( npc );
         }
     }
 
