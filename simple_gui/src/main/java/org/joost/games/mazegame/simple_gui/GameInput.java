@@ -4,15 +4,13 @@ import static org.joost.games.mazegame.entities.Direction.*;
 
 import java.util.Scanner;
 
-import org.joost.games.mazegame.entities.Direction;
 import org.joost.games.mazegame.entities.Field;
 import org.joost.games.mazegame.entities.FinishedListener;
-import org.joost.games.mazegame.entities.Npc;
 
 public class GameInput implements FinishedListener {
 
-    Field field;
-    Scanner scanner;
+    private Field field;
+    private Scanner scanner;
     private boolean finished;
 
     // de starter-method. maakt een field aan voor de meegekregen parameter
@@ -56,15 +54,12 @@ public class GameInput implements FinishedListener {
                 }
             }
 
-            boolean alleNpcsBewogen = false;
-            while (!alleNpcsBewogen) {
-
-
-                for (int i = 0; i < field.npcs.size(); i++) {
-                    while (!moveNPC( field.npcs.get( i ) )) {
-                    }
+            // als de speler succesvol bewogen heeft, moeten alle npc een random beweging maken
+            for (int i = 0; i < field.npcs.size(); i++) {
+                while (!field.npcs.get( i ).moveNPC()) {
                 }
             }
+
         }
         System.out.println( "FINISHED!" );
     }
@@ -75,32 +70,4 @@ public class GameInput implements FinishedListener {
         this.finished = true;
     }
 
-    private boolean moveNPC(
-            Npc npc ) {
-        int rand = (int) (Math.random() * 4) + 1;
-        Direction dir = null;
-        switch (rand) {
-            case 1:
-                dir = NORTH;
-                break;
-            case 2:
-                dir = EAST;
-                break;
-            case 3:
-                dir = SOUTH;
-                break;
-            case 4:
-                dir = WEST;
-                break;
-        }
-        try {
-            if (npc.move( dir )) {
-                return true;
-            }
-        } catch (ArrayIndexOutOfBoundsException e) {
-
-        }
-        return false;
-
-    }
 }

@@ -147,6 +147,7 @@ public class Field implements FinishedListener {
             Tile tile = matrix[y][x];
             if (tile.isNpcAllowed()) {
                 tile.putNpc( npc );
+                npc.tile=tile;
                 return true;
             }
         } catch (ArrayIndexOutOfBoundsException e) {

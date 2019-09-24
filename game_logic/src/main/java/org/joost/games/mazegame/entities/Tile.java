@@ -45,7 +45,7 @@ public abstract class Tile {
 
     // zet een speler op de tile door het attribuut te vullen
     // als de naam van de Finisch overeenkomt met de getChar van deze tile is de finish bereikt
-    public void putPlayer( Player player ) {
+    void putPlayer( Player player ) {
         this.player = player;
         if (Finish.NAME.equals( getChar() )) {
             listener.finished( true );
@@ -53,19 +53,19 @@ public abstract class Tile {
     }
 
     // zet een npc op de tile door het attribuut te vullen
-    public void putNpc( Npc npc ) {
+    void putNpc( Npc npc ) {
         this.npc=npc;
 
     }
 
     // haalt de speler van de tile af door het attribuut te legen
-    public void removePlayer() {
+    void removePlayer() {
         this.player = null;
     }
 
     // haalt de npc van de tile door het attribuut te legen
     // doet nog niks, omdat de npcs nog niet bewegen
-    public void removeNpc() {
+    void removeNpc() {
         this.npc = null;
     }
 }

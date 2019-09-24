@@ -1,11 +1,11 @@
 package org.joost.games.mazegame.entities;
 
-public class Friend extends Npc {
+class Friend extends Npc {
 
-    public static final String NAME = "v";
+    static final String NAME = "v";
 
 
-    public Friend() {
+    Friend() {
         this.health = 20;
         this.damage = 0;
     }

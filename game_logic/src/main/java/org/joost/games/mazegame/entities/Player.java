@@ -2,10 +2,10 @@ package org.joost.games.mazegame.entities;
 
 public class Player extends Deelnemer {
 
-    public static final String NAME = "p";
+    private static final String NAME = "p";
     private int maxHealth;
 
-    public Player() {
+    Player() {
         this.health = 75;
         this.maxHealth = 100;
         this.damage = 10;
@@ -73,7 +73,7 @@ public class Player extends Deelnemer {
     // geeft false terug als de health kleiner of gelijk is aan nul
     // todo als de health onder 0 komt krijgen we een nullpoiner-exception!
 
-    public boolean meetSomeone( Npc npc ) {
+    boolean meetSomeone( Npc npc ) {
 
         if (npc.getChar().equals( Friend.NAME )) {
             if (maxHealth-health<=npc.health) {

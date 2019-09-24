@@ -1,4 +1,3 @@
-bewegende npcs.
 random health en damage? moeten die ook geprint ofzo?
 
 java fx?
