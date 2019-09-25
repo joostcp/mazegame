@@ -2,25 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="761f4edf-36c2-4c59-88a3-f432137c38eb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Field.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Foe.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Foe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Friend.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Friend.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Npc.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Npc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Tile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game_logic/src/main/resources/game.txt" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/resources/game.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_logic/target/classes/game.txt" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/target/classes/game.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Field.class" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Field.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Foe.class" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Foe.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Friend.class" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Friend.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Npc$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Npc$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Npc.class" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Npc.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Tile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_gui/src/main/java/org/joost/games/mazegame/simple_gui/GameInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/simple_gui/src/main/java/org/joost/games/mazegame/simple_gui/GameInput.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simple_gui/src/main/resources/game.txt" beforeDir="false" afterPath="$PROJECT_DIR$/simple_gui/src/main/resources/game.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_gui/target/classes/game.txt" beforeDir="false" afterPath="$PROJECT_DIR$/simple_gui/target/classes/game.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_gui/target/classes/org/joost/games/mazegame/simple_gui/GameInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/simple_gui/target/classes/org/joost/games/mazegame/simple_gui/GameInput.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -231,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569411640880</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="ontmoetingen werken nog niet lekker">
+      <created>1569415363732</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1569415363732</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

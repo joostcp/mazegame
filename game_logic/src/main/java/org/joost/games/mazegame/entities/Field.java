@@ -33,7 +33,7 @@ public class Field implements FinishedListener, DeelnemerKilledListener {
         }
         tempTiles.clear();
         connect();
-        plotNpc( 1, 1 );
+        plotNpc( 3, 3 );
         start.putPlayer( player );
         player.tile = start;
     }
