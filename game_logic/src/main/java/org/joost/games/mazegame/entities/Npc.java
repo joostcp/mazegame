@@ -3,9 +3,13 @@ package org.joost.games.mazegame.entities;
 import static org.joost.games.mazegame.entities.Direction.*;
 
 public abstract class Npc extends Deelnemer {
+
+    int id;
+
     @Override
     public String toString() {
-        return "{damage=" + damage +
+        return "{id=" + id +
+                ", damage=" + damage +
                 ", health=" + health +
                 '}';
     }
@@ -78,6 +82,5 @@ public abstract class Npc extends Deelnemer {
 
         }
         return false;
-
     }
 }

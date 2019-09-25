@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
 
-public class Field implements FinishedListener {
+public class Field implements FinishedListener, DeelnemerKilledListener{
 
     private Tile[][] matrix;
     private final List<List<Tile>> tempTiles = new ArrayList<>();
@@ -15,7 +15,8 @@ public class Field implements FinishedListener {
     public Player player = new Player();
     private int maxX;
     private int maxY;
-    public ArrayList<Npc> npcs = new ArrayList<>(  );
+    public ArrayList<Npc> deelnemers = new ArrayList<>(  );
+
 
     // todo nog beschrijven
     public void add( List<Tile> tiles ) {
@@ -44,7 +45,7 @@ public class Field implements FinishedListener {
     }
 
     // connect vult voor elke tile de vier attribuut-tiles north, south, east en west
-    // eigenlijk: loopt door de map en doet bij elke tile een van de vier omliggende tile-attibutren vullen
+    // eigenlijk: loopt door de map en vult bij elke tile een van de vier omliggende tile-attributen
     private void connect() {
         maxY = matrix.length;
         for (int y = 0; y < matrix.length; y++) {
@@ -101,7 +102,7 @@ public class Field implements FinishedListener {
                 break;
             case "F":
                 this.finish = t;
-                t.listener = this;
+                t.finishedListener = this;
         }
     }
 
@@ -118,21 +119,27 @@ public class Field implements FinishedListener {
         return sb.toString();
     }
 
-    // hier wordt een aantal (number) npc gemaakt en op de map geplaatst.
+    // hier wordt een aantal friends en foes gemaakt en op de map geplaatst.
     // zolang dat niet gelukt is, blijft ie proberen
     private void plotNpc( int numberFoe, int numberFriend ) {
         Random rnd = new Random();
+        int nummer=1;
         for (int i = 0; i < numberFoe; i++) {
             Npc npc = new Foe();
+            npc.id=nummer;
+            nummer++;
             while (!putNpc( npc, rnd )) {
             }
-            npcs.add( npc );
+            deelnemers.add( npc );
+
         }
         for (int i = 0; i < numberFriend; i++) {
             Npc npc = new Friend();
+            npc.id=nummer;
+            nummer++;
             while (!putNpc( npc, rnd )) {
             }
-            npcs.add( npc );
+            deelnemers.add( npc );
         }
     }
 
@@ -154,15 +161,7 @@ public class Field implements FinishedListener {
 
         }
         return false;
-
     }
-
-
-
-
-
-
-
 
     // moet omdat de FinishedListener-interface geimplementeerd wordt
     // als de return-value true is staat de speler op de finish-tile en heeft hij dus gewonnen
@@ -172,9 +171,29 @@ public class Field implements FinishedListener {
         System.out.println( "FINISHED: " + (hasWon ? "You won" : "You lost") );
     }
 
-    // todo nog beschrijven
     // hier wordt de listener van de finish-tile geset met een listener die meekomt als parameter
     public void setFinishedListener( FinishedListener listener ) {
-        this.finish.listener = listener;
+        this.finish.finishedListener = listener;
+    }
+
+    void removeDeelnemer(int index){
+        deelnemers.remove( index );
+    }
+
+//    @Override
+//    public void deelnemerKilled(
+//            Npc npc,
+//            boolean wasKilled ) {
+
+//        Npc dood = deelnemers.get (npc.id-1);
+//        dood.damage=0;
+//        dood.health=0;
+//        deelnemers.set( npc.id-1 , dood);
+
+
+
+    @Override
+    public void deelnemerKilled( Npc npc, boolean wasKilled ) {
+        System.out.println("id: " +npc.id + " // plek in array: " + deelnemers.indexOf( npc ));
     }
 }

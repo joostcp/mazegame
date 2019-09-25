@@ -72,6 +72,7 @@ public class Player extends Deelnemer {
     // geeft true terug als er, na aftrek van de damage van de meegegeven npc, nog health boven nul overblijft
     // geeft false terug als de health kleiner of gelijk is aan nul
     // todo als de health onder 0 komt krijgen we een nullpoiner-exception!
+    // todo een overlopen vriend moet verdwijen (ook uit de array?)
 
     boolean meetSomeone( Npc npc ) {
 
@@ -81,7 +82,8 @@ public class Player extends Deelnemer {
                 System.out.println( "can't get any healthier..." );
             }
             else {this.health += npc.health;}
-            this.tile.removeNpc();
+            this.tile.npcDied(  );
+
         }
         if (npc.getChar().equals( Foe.NAME )) {
             this.health -= npc.damage;

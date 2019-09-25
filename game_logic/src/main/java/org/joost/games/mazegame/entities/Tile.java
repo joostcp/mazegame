@@ -7,7 +7,9 @@ public abstract class Tile {
     Tile south;
     Tile east;
     Tile west;
-    FinishedListener listener;
+    FinishedListener finishedListener;
+    DeelnemerKilledListener deelnemerKilledListener;
+
 
     // of er op de tile een blokkade aanwezig is
     abstract boolean isBlocking();
@@ -22,9 +24,10 @@ public abstract class Tile {
     public String toString() {
 
         if (player != null && npc != null) {
-            if(!player.meetSomeone(npc)) {
-                listener.finished(false);
-            };
+            if (!player.meetSomeone( npc )) {
+                finishedListener.finished( false );
+            }
+            ;
             return "B";
             // als de speler en een npc op hetzelfde veld staan en de health
             // van de speler niet lager dan 0 is, dan is het weer te geven symbool een 'B' (b+p)
@@ -40,7 +43,6 @@ public abstract class Tile {
         }
 
         return getChar();
-
     }
 
     // zet een speler op de tile door het attribuut te vullen
@@ -48,14 +50,13 @@ public abstract class Tile {
     void putPlayer( Player player ) {
         this.player = player;
         if (Finish.NAME.equals( getChar() )) {
-            listener.finished( true );
+            finishedListener.finished( true );
         }
     }
 
     // zet een npc op de tile door het attribuut te vullen
     void putNpc( Npc npc ) {
-        this.npc=npc;
-
+        this.npc = npc;
     }
 
     // haalt de speler van de tile af door het attribuut te legen
@@ -64,9 +65,19 @@ public abstract class Tile {
     }
 
     // haalt de npc van de tile door het attribuut te legen
-    // doet nog niks, omdat de npcs nog niet bewegen
     void removeNpc() {
-        this.npc = null;
-
+        this.npc=null;
     }
+
+    void npcDied (){
+        deelnemerKilledListener.deelnemerKilled( this.npc, true );
+        removeNpc();
+    }
+
 }
+
+/**
+ * deelnemerKilledListener.deelnemerKilled( this.npc,true );
+ *         this.npc.health=0;
+ *         this.npc.damage=0;
+ **/

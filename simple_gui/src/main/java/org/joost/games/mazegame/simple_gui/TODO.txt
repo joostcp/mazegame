@@ -3,3 +3,7 @@ random health en damage?
 moeten die ook geprint ofzo?
 
 java fx?
+
+vrienden moeten verdwijnen na overlopen te zijn
+
+transporters?

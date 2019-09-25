@@ -2,7 +2,7 @@ package org.joost.games.mazegame.entities;
 
 public class Finish extends Air {
 
-    // het symbool ovor de finish op de map
+    // het symbool voor de finish op de map
     static final String NAME = "F";
 
     @Override

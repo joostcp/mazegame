@@ -1,7 +1,6 @@
 package org.joost.games.mazegame.simple_gui;
 
 import static org.joost.games.mazegame.entities.Direction.*;
-
 import java.util.Scanner;
 
 import org.joost.games.mazegame.entities.Field;
@@ -28,16 +27,19 @@ public class GameInput implements FinishedListener {
         field.setFinishedListener( this );
         while (!finished) {
 
+            // dit rijtje printlines is het printen van het doolhof
+            // de gegevens van de deelnemers
+            // de gezondheidsgegevens van de speler en het verzoek te bewegen
             System.out.println( field.toString() );
             System.out.println("---");
-            for (Npc npc : field.npcs )
+            for (Npc npc : field.deelnemers)
                   {
-                      System.out.println((field.npcs.indexOf( npc )+1)+ ": " +npc.toString() );
-
+                      System.out.println((field.deelnemers.indexOf( npc )+1)+ ": " +npc.toString() );
             }
             System.out.println("---");
             System.out.println( "health: " + field.player.getHealth() + "/" + field.player.getMaxHealth() );
             System.out.println( "geef uw input: " );
+
             // de scanner herkent vier karakters als input: WSAD voor noord/zuid/west/oost
             // bij een andere input, of als de gevraagde rchting niet kan (ivm block) wordt de speler daarop gewezen
             if (scanner.hasNext()) {
@@ -62,12 +64,11 @@ public class GameInput implements FinishedListener {
                 }
             }
 
-            // als de speler succesvol bewogen heeft, moeten alle npc een random beweging maken
-            for (int i = 0; i < field.npcs.size(); i++) {
-                while (!field.npcs.get( i ).moveNPC()) {
+            // als de speler succesvol bewogen heeft, moeten alle deelnemers een random beweging maken
+            for (int i = 0; i < field.deelnemers.size(); i++) {
+                while (!field.deelnemers.get( i ).moveNPC()) {
                 }
             }
-
         }
         System.out.println( "FINISHED!" );
     }
