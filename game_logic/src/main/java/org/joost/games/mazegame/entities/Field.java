@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
 
-public class Field implements FinishedListener, DeelnemerKilledListener{
+public class Field implements FinishedListener, DeelnemerKilledListener {
 
     private Tile[][] matrix;
     private final List<List<Tile>> tempTiles = new ArrayList<>();
@@ -15,7 +15,7 @@ public class Field implements FinishedListener, DeelnemerKilledListener{
     public Player player = new Player();
     private int maxX;
     private int maxY;
-    public ArrayList<Npc> deelnemers = new ArrayList<>(  );
+    public ArrayList<Npc> deelnemers = new ArrayList<>();
 
 
     // todo nog beschrijven
@@ -33,7 +33,7 @@ public class Field implements FinishedListener, DeelnemerKilledListener{
         }
         tempTiles.clear();
         connect();
-        plotNpc( 3 ,2);
+        plotNpc( 1, 1 );
         start.putPlayer( player );
         player.tile = start;
     }
@@ -121,25 +121,27 @@ public class Field implements FinishedListener, DeelnemerKilledListener{
 
     // hier wordt een aantal friends en foes gemaakt en op de map geplaatst.
     // zolang dat niet gelukt is, blijft ie proberen
-    private void plotNpc( int numberFoe, int numberFriend ) {
+    private void plotNpc(
+            int numberFoe,
+            int numberFriend ) {
         Random rnd = new Random();
-        int nummer=1;
+        int nummer = 0;
         for (int i = 0; i < numberFoe; i++) {
             Npc npc = new Foe();
-            npc.id=nummer;
-            nummer++;
+            npc.id = nummer + 1;
             while (!putNpc( npc, rnd )) {
             }
-            deelnemers.add( npc );
+            deelnemers.add( nummer, npc );
+            nummer++;
 
         }
         for (int i = 0; i < numberFriend; i++) {
             Npc npc = new Friend();
-            npc.id=nummer;
-            nummer++;
+            npc.id = nummer + 1;
             while (!putNpc( npc, rnd )) {
             }
-            deelnemers.add( npc );
+            deelnemers.add( nummer, npc );
+            nummer++;
         }
     }
 
@@ -154,7 +156,7 @@ public class Field implements FinishedListener, DeelnemerKilledListener{
             Tile tile = matrix[y][x];
             if (tile.isNpcAllowed()) {
                 tile.putNpc( npc );
-                npc.tile=tile;
+                npc.tile = tile;
                 return true;
             }
         } catch (ArrayIndexOutOfBoundsException e) {
@@ -180,27 +182,13 @@ public class Field implements FinishedListener, DeelnemerKilledListener{
         this.player.tile.deelnemerKilledListener = listener;
     }
 
-    void removeDeelnemer(int index){
+    void removeDeelnemer( int index ) {
         deelnemers.remove( index );
     }
 
     @Override
     public void deelnemerKilled( boolean hasDied ) {
-        System.out.println("someone died... :( ");
+        System.out.println( "someone died... :( " );
     }
-
-//    @Override
-//    public void deelnemerKilled(
-//            Npc npc,
-//            boolean wasKilled ) {
-
-//        Npc dood = deelnemers.get (npc.id-1);
-//        dood.damage=0;
-//        dood.health=0;
-//        deelnemers.set( npc.id-1 , dood);
-
-
-
-//        System.out.println("id: " +npc.id + " // plek in array: " + deelnemers.indexOf( npc ));
 
 }

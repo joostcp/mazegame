@@ -56,7 +56,7 @@ public abstract class Tile {
 
     // zet een npc op de tile door het attribuut te vullen
     void putNpc( Npc npc ) {
-        this.npc = npc;
+        if (npc.alive) this.npc = npc;
     }
 
     // haalt de speler van de tile af door het attribuut te legen
@@ -66,18 +66,13 @@ public abstract class Tile {
 
     // haalt de npc van de tile door het attribuut te legen
     void removeNpc() {
-        this.npc=null;
+       // if (!this.npc.alive) {deelnemerKilledListener.deelnemerKilled( true );}
+        this.npc = null;
     }
 
-    void npcDied (){
+    void npcDied() {
         this.deelnemerKilledListener.deelnemerKilled( true );
         removeNpc();
     }
 
 }
-
-/**
- * deelnemerKilledListener.deelnemerKilled( this.npc,true );
- *         this.npc.health=0;
- *         this.npc.damage=0;
- **/

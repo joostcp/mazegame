@@ -79,7 +79,8 @@ public class GameInput implements FinishedListener, DeelnemerKilledListener {
     // todo nog beschrijven
     @Override
     public void finished( boolean hasWon ) {
-            System.out.println( "FINISHED: " + (hasWon ? "You won" : "You lost") );
+        finished=hasWon;
+        //System.out.println( "FINISHED: " + (hasWon ? "You won" : "You lost") );
     }
 
     // todo doet dit al iets?

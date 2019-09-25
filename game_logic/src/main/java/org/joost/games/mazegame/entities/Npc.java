@@ -5,12 +5,12 @@ import static org.joost.games.mazegame.entities.Direction.*;
 public abstract class Npc extends Deelnemer {
 
     int id;
-    boolean alive=true;
+    boolean alive = true;
 
-    public void die(){
-        this.alive=false;
-        this.health=0;
-        this.damage=0;
+    public void die() {
+        this.alive = false;
+        this.health = 0;
+        this.damage = 0;
     }
 
     @Override
@@ -24,44 +24,47 @@ public abstract class Npc extends Deelnemer {
 
     @Override
     public boolean move( Direction direction ) {
-        switch (direction) {
-            case NORTH:
-                if (tile.north != null && !tile.north.isBlocking()) {
-                    this.tile.removeNpc();
-                    this.tile = tile.north;
-                    this.tile.putNpc(  this );
-                    return true;
-                }
-                break;
+        //while (this.alive) {
+            switch (direction) {
+                case NORTH:
+                    if (tile.north != null && !tile.north.isBlocking()) {
+                        this.tile.removeNpc();
+                        this.tile = tile.north;
+                        this.tile.putNpc( this );
+                        return true;
+                    }
+                    break;
 
-            case EAST:
-                if (tile.east != null && !tile.east.isBlocking()) {
-                    this.tile.removeNpc();
-                    this.tile = tile.east;
-                    this.tile.putNpc( this );
-                    return true;
-                }
-                break;
+                case EAST:
+                    if (tile.east != null && !tile.east.isBlocking()) {
+                        this.tile.removeNpc();
+                        this.tile = tile.east;
+                        this.tile.putNpc( this );
+                        return true;
+                    }
+                    break;
 
-            case SOUTH:
-                if (tile.south != null && !tile.south.isBlocking()) {
-                    this.tile.removeNpc();
-                    this.tile = tile.south;
-                    this.tile.putNpc( this );
-                    return true;
-                }
-                break;
+                case SOUTH:
+                    if (tile.south != null && !tile.south.isBlocking()) {
+                        this.tile.removeNpc();
+                        this.tile = tile.south;
+                        this.tile.putNpc( this );
+                        return true;
+                    }
+                    break;
 
-            case WEST:
-                if (tile.west != null && !tile.west.isBlocking()) {
-                    this.tile.removeNpc();
-                    this.tile = tile.west;
-                    this.tile.putNpc( this );
-                    return true;
-                }
-                break;
-        }
+                case WEST:
+                    if (tile.west != null && !tile.west.isBlocking()) {
+                        this.tile.removeNpc();
+                        this.tile = tile.west;
+                        this.tile.putNpc( this );
+                        return true;
+                    }
+                    break;
+            }
+
         return false;
+
     }
 
     public boolean moveNPC(

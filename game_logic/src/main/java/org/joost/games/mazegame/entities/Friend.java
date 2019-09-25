@@ -15,6 +15,8 @@ class Friend extends Npc {
     String getChar() {
 
         if (alive) {return NAME;}
-        else return new Air().getChar();
+        else {//tile.removeNpc();
+
+        return ".";}
     }
 }

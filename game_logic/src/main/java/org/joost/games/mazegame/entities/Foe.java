@@ -12,6 +12,9 @@ class Foe extends Npc {
 
     // het symbool voor een foe op de kaart
     @Override
+//    String getChar() {
+//        return NAME;
+//    }
     String getChar() {
         return NAME;
     }

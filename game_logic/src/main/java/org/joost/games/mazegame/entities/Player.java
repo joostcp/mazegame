@@ -94,6 +94,4 @@ public class Player extends Deelnemer {
         }
         return this.health > 0;
     }
-
-
 }
