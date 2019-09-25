@@ -3,11 +3,12 @@ package org.joost.games.mazegame.simple_gui;
 import static org.joost.games.mazegame.entities.Direction.*;
 import java.util.Scanner;
 
+import org.joost.games.mazegame.entities.DeelnemerKilledListener;
 import org.joost.games.mazegame.entities.Field;
 import org.joost.games.mazegame.entities.FinishedListener;
 import org.joost.games.mazegame.entities.Npc;
 
-public class GameInput implements FinishedListener {
+public class GameInput implements FinishedListener, DeelnemerKilledListener {
 
     private Field field;
     private Scanner scanner;
@@ -23,7 +24,7 @@ public class GameInput implements FinishedListener {
     void start() {
         // hier wordt de finished listener van het Field geset om de luisteren naar de finish-staat van deze class.
         // zolang de staat is 'niet gefinished' (en dat kan op twee manieren: dood of victorie) wordt er gekeken naar input (in de while-loop)
-
+        field.setDeelnemerKilledListener( this );
         field.setFinishedListener( this );
         while (!finished) {
 
@@ -69,6 +70,8 @@ public class GameInput implements FinishedListener {
                 while (!field.deelnemers.get( i ).moveNPC()) {
                 }
             }
+
+
         }
         System.out.println( "FINISHED!" );
     }
@@ -76,7 +79,12 @@ public class GameInput implements FinishedListener {
     // todo nog beschrijven
     @Override
     public void finished( boolean hasWon ) {
-        this.finished = true;
+            System.out.println( "FINISHED: " + (hasWon ? "You won" : "You lost") );
     }
 
+    // todo doet dit al iets?
+    @Override
+    public void deelnemerKilled( boolean hasDied ) {
+        System.out.println("someone died... :( ");
+    }
 }

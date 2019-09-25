@@ -5,12 +5,20 @@ import static org.joost.games.mazegame.entities.Direction.*;
 public abstract class Npc extends Deelnemer {
 
     int id;
+    boolean alive=true;
+
+    public void die(){
+        this.alive=false;
+        this.health=0;
+        this.damage=0;
+    }
 
     @Override
     public String toString() {
         return "{id=" + id +
                 ", damage=" + damage +
                 ", health=" + health +
+                ", alive=" + alive +
                 '}';
     }
 

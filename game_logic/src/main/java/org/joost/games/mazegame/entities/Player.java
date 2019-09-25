@@ -77,14 +77,15 @@ public class Player extends Deelnemer {
     boolean meetSomeone( Npc npc ) {
 
         if (npc.getChar().equals( Friend.NAME )) {
-            if (maxHealth-health<=npc.health) {
-                this.health=maxHealth;
+            if (maxHealth - health <= npc.health) {
+                this.health = maxHealth;
                 System.out.println( "can't get any healthier..." );
+            } else {
+                this.health += npc.health;
             }
-            else {this.health += npc.health;}
-            this.tile.npcDied(  );
-
+            npc.die();
         }
+
         if (npc.getChar().equals( Foe.NAME )) {
             this.health -= npc.damage;
             if (health < 0) {
@@ -93,4 +94,6 @@ public class Player extends Deelnemer {
         }
         return this.health > 0;
     }
+
+
 }

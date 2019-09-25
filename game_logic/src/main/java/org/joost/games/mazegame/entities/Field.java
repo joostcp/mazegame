@@ -176,8 +176,17 @@ public class Field implements FinishedListener, DeelnemerKilledListener{
         this.finish.finishedListener = listener;
     }
 
+    public void setDeelnemerKilledListener( DeelnemerKilledListener listener ) {
+        this.player.tile.deelnemerKilledListener = listener;
+    }
+
     void removeDeelnemer(int index){
         deelnemers.remove( index );
+    }
+
+    @Override
+    public void deelnemerKilled( boolean hasDied ) {
+        System.out.println("someone died... :( ");
     }
 
 //    @Override
@@ -192,8 +201,6 @@ public class Field implements FinishedListener, DeelnemerKilledListener{
 
 
 
-    @Override
-    public void deelnemerKilled( Npc npc, boolean wasKilled ) {
-        System.out.println("id: " +npc.id + " // plek in array: " + deelnemers.indexOf( npc ));
-    }
+//        System.out.println("id: " +npc.id + " // plek in array: " + deelnemers.indexOf( npc ));
+
 }

@@ -13,6 +13,8 @@ class Friend extends Npc {
     // het symbool voor een friend op de kaart
     @Override
     String getChar() {
-        return NAME;
+
+        if (alive) {return NAME;}
+        else return new Air().getChar();
     }
 }

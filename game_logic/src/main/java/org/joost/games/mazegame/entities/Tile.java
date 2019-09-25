@@ -70,7 +70,7 @@ public abstract class Tile {
     }
 
     void npcDied (){
-        deelnemerKilledListener.deelnemerKilled( this.npc, true );
+        this.deelnemerKilledListener.deelnemerKilled( true );
         removeNpc();
     }
 
