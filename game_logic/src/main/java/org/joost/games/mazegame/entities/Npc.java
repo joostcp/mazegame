@@ -5,13 +5,6 @@ import static org.joost.games.mazegame.entities.Direction.*;
 public abstract class Npc extends Deelnemer {
 
     int id;
-    boolean alive = true;
-
-    public void die() {
-        this.alive = false;
-        this.health = 0;
-        this.damage = 0;
-    }
 
     @Override
     public String toString() {
@@ -19,12 +12,12 @@ public abstract class Npc extends Deelnemer {
                 ", damage=" + damage +
                 ", health=" + health +
                 ", alive=" + alive +
+                ", strength=" + strength +
                 '}';
     }
 
     @Override
     public boolean move( Direction direction ) {
-        //while (this.alive) {
             switch (direction) {
                 case NORTH:
                     if (tile.north != null && !tile.north.isBlocking()) {
@@ -62,9 +55,7 @@ public abstract class Npc extends Deelnemer {
                     }
                     break;
             }
-
         return false;
-
     }
 
     public boolean moveNPC(
@@ -93,5 +84,34 @@ public abstract class Npc extends Deelnemer {
 
         }
         return false;
+    }
+
+    // als we een vriend ontmoeten, gaat de energie omhoog, tot de maximale energie.
+    // als we een vijand ontmoeten gaat er energie af, tot de dood erop volgt
+    // geeft true terug als er, na aftrek van de damage van de meegegeven npc, nog health boven nul overblijft
+    // geeft false terug als de health kleiner of gelijk is aan nul
+    // todo als de health onder 0 komt krijgen we een nullpoiner-exception!
+    // todo een overlopen vriend moet verdwijen (ook uit de array?)
+
+    boolean meetSomeone( Player player ) {
+
+        if (getChar().equals( Friend.NAME )) {
+            if (player.getMaxHealth()- player.health <= this.health) {
+                player.health = player.getMaxHealth();
+                System.out.println( "can't get any healthier..." );
+            } else {
+                player.health += this.health;
+            }
+            die();
+        }
+
+        if (getChar().equals( Foe.NAME )) {
+            player.health -= this.damage;
+            if (player.health <= 0) {
+                System.out.println( "im dying...." );
+                player.die();
+            }
+        }
+        return player.health > 0;
     }
 }

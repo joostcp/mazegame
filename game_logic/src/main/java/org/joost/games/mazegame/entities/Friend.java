@@ -4,10 +4,8 @@ class Friend extends Npc {
 
     static final String NAME = "v";
 
-
     Friend() {
-        this.health = 20;
-        this.damage = 0;
+        this.health = (int) (Math.random() * 25) + 1;
     }
 
     // het symbool voor een friend op de kaart
@@ -15,8 +13,7 @@ class Friend extends Npc {
     String getChar() {
 
         if (alive) {return NAME;}
-        else {//tile.removeNpc();
-
+        else {
         return ".";}
     }
 }

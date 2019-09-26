@@ -7,3 +7,11 @@ java fx?
 vrienden moeten verdwijnen na overlopen te zijn
 
 transporters?
+
+foes die een route lopen
+
+foes die een globale richting kiezen -> strategy?
+
+iets om een gekozen strategy weer af te breken (bijv als de player in de buurt is)
+gevecht? dwz: player kan foes aanvallen / health kan afnemen
+

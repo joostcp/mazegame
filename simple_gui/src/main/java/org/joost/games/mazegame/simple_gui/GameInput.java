@@ -1,6 +1,7 @@
 package org.joost.games.mazegame.simple_gui;
 
 import static org.joost.games.mazegame.entities.Direction.*;
+
 import java.util.Scanner;
 
 import org.joost.games.mazegame.entities.DeelnemerKilledListener;
@@ -32,13 +33,14 @@ public class GameInput implements FinishedListener, DeelnemerKilledListener {
             // de gegevens van de deelnemers
             // de gezondheidsgegevens van de speler en het verzoek te bewegen
             System.out.println( field.toString() );
-            System.out.println("---");
-            for (Npc npc : field.deelnemers)
-                  {
-                      System.out.println((field.deelnemers.indexOf( npc )+1)+ ": " +npc.toString() );
+            System.out.println( "---" );
+            for (Npc npc : field.deelnemers) {
+                System.out.println( (field.deelnemers.indexOf( npc ) + 1) + ": " + npc.toString() );
             }
-            System.out.println("---");
+            System.out.println( "---" );
             System.out.println( "health: " + field.player.getHealth() + "/" + field.player.getMaxHealth() );
+            System.out.println( "strength: " + field.player.getStrength() );
+            System.out.println( "damage: " + field.player.getDamage() );
             System.out.println( "geef uw input: " );
 
             // de scanner herkent vier karakters als input: WSAD voor noord/zuid/west/oost
@@ -70,8 +72,6 @@ public class GameInput implements FinishedListener, DeelnemerKilledListener {
                 while (!field.deelnemers.get( i ).moveNPC()) {
                 }
             }
-
-
         }
         System.out.println( "FINISHED!" );
     }
@@ -79,13 +79,12 @@ public class GameInput implements FinishedListener, DeelnemerKilledListener {
     // todo nog beschrijven
     @Override
     public void finished( boolean hasWon ) {
-        finished=hasWon;
-        //System.out.println( "FINISHED: " + (hasWon ? "You won" : "You lost") );
+        finished = hasWon;
     }
 
     // todo doet dit al iets?
     @Override
     public void deelnemerKilled( boolean hasDied ) {
-        System.out.println("someone died... :( ");
+        System.out.println( "someone died... :( " );
     }
 }

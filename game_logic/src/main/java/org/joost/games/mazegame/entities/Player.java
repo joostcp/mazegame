@@ -9,6 +9,7 @@ public class Player extends Deelnemer {
         this.health = 75;
         this.maxHealth = 100;
         this.damage = 10;
+        this.strength=20;
     }
 
     public int getMaxHealth() {
@@ -61,37 +62,13 @@ public class Player extends Deelnemer {
         return false;
     }
 
+
+
     // het spelersymbool in de maze
     @Override
     String getChar() {
         return NAME;
     }
 
-    // als we een vriend ontmoeten, gaat de energie omhoog, tot de maximale energie.
-    // als we een vijand ontmoeten gaat er energie af, tot de dood erop volgt
-    // geeft true terug als er, na aftrek van de damage van de meegegeven npc, nog health boven nul overblijft
-    // geeft false terug als de health kleiner of gelijk is aan nul
-    // todo als de health onder 0 komt krijgen we een nullpoiner-exception!
-    // todo een overlopen vriend moet verdwijen (ook uit de array?)
 
-    boolean meetSomeone( Npc npc ) {
-
-        if (npc.getChar().equals( Friend.NAME )) {
-            if (maxHealth - health <= npc.health) {
-                this.health = maxHealth;
-                System.out.println( "can't get any healthier..." );
-            } else {
-                this.health += npc.health;
-            }
-            npc.die();
-        }
-
-        if (npc.getChar().equals( Foe.NAME )) {
-            this.health -= npc.damage;
-            if (health < 0) {
-                System.out.println( "im dying...." );
-            }
-        }
-        return this.health > 0;
-    }
 }

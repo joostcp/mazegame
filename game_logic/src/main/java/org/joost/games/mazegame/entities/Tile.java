@@ -24,7 +24,7 @@ public abstract class Tile {
     public String toString() {
 
         if (player != null && npc != null) {
-            if (!player.meetSomeone( npc )) {
+            if (!npc.meetSomeone( player )) {
                 finishedListener.finished( false );
             }
             ;
