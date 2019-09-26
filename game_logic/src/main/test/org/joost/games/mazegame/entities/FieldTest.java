@@ -1,8 +1,9 @@
 package org.joost.games.mazegame.entities;
 
-import static org.joost.games.mazegame.entities.Direction.*;
+import static org.joost.games.mazegame.entities.participants.Direction.*;
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.joost.games.mazegame.entities.elements.Field;
 import org.junit.jupiter.api.Test;
 
 import init.FieldReader;

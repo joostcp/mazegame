@@ -1,7 +1,5 @@
 package org.joost.games.mazegame.simple_gui;
 
-import org.joost.games.mazegame.entities.Field;
-
 import init.FieldReader;
 
 public class Game {

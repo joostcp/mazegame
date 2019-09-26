@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="761f4edf-36c2-4c59-88a3-f432137c38eb" name="Default Changelist" comment="">
+    <list default="true" id="761f4edf-36c2-4c59-88a3-f432137c38eb" name="Default Changelist" comment="reorganisatie van entities">
+      <change afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/objects/PowerUp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/objects/Stuff.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Deelnemer.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Deelnemer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Foe.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Foe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Friend.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Friend.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Npc.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Npc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Tile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Deelnemer.class" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Deelnemer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Foe.class" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Foe.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Friend.class" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Friend.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Npc$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Npc$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Npc.class" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Npc.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Player$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Player$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/target/classes/org/joost/games/mazegame/entities/Tile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/init/FieldReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/init/FieldReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Air.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/elements/Air.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/elements/Block.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Deelnemer.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/participants/Deelnemer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/DeelnemerKilledListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/participants/DeelnemerKilledListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/participants/Direction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/elements/Field.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Finish.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/elements/Finish.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/FinishedListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/elements/FinishedListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Foe.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/participants/Foe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Friend.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/participants/Friend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Moveable.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/participants/Moveable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Npc.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/participants/Npc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/participants/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/elements/Start.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/java/org/joost/games/mazegame/entities/elements/Tile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_logic/src/main/test/org/joost/games/mazegame/entities/FieldTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/src/main/test/org/joost/games/mazegame/entities/FieldTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_gui/src/main/java/org/joost/games/mazegame/simple_gui/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/simple_gui/src/main/java/org/joost/games/mazegame/simple_gui/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simple_gui/src/main/java/org/joost/games/mazegame/simple_gui/GameInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/simple_gui/src/main/java/org/joost/games/mazegame/simple_gui/GameInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_gui/src/main/java/org/joost/games/mazegame/simple_gui/TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/simple_gui/src/main/java/org/joost/games/mazegame/simple_gui/TODO.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_gui/target/classes/org/joost/games/mazegame/simple_gui/GameInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/simple_gui/target/classes/org/joost/games/mazegame/simple_gui/GameInput.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,15 +36,15 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="deelnemerOntmoetingen" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -125,7 +129,7 @@
       <module name="game_logic" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.joost.games.mazegame.entities.*" />
+          <option name="PATTERN" value="org.joost.games.mazegame.entities.elements.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -140,7 +144,7 @@
       <module name="game_logic" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.joost.games.mazegame.entities.*" />
+          <option name="PATTERN" value="org.joost.games.mazegame.entities.elements.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -244,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569417038604</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="aanpassingen obv feedback emmo 2609">
+      <created>1569486516560</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1569486516560</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,6 +278,8 @@
     <MESSAGE value="een poging de friends en foes random te laten bewegen. werk nog niet. wel een deelnemer-class gemaakt, waar alle deelnemers van erven" />
     <MESSAGE value="de friends en foes bewegen random!" />
     <MESSAGE value="ontmoetingen werken nog niet lekker" />
-    <option name="LAST_COMMIT_MESSAGE" value="ontmoetingen werken nog niet lekker" />
+    <MESSAGE value="aanpassingen obv feedback emmo 2609" />
+    <MESSAGE value="reorganisatie van entities" />
+    <option name="LAST_COMMIT_MESSAGE" value="reorganisatie van entities" />
   </component>
 </project>

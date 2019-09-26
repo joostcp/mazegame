@@ -7,12 +7,12 @@ import java.io.InputStreamReader;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import org.joost.games.mazegame.entities.Air;
-import org.joost.games.mazegame.entities.Block;
-import org.joost.games.mazegame.entities.Field;
-import org.joost.games.mazegame.entities.Finish;
-import org.joost.games.mazegame.entities.Start;
-import org.joost.games.mazegame.entities.Tile;
+import org.joost.games.mazegame.entities.elements.Air;
+import org.joost.games.mazegame.entities.elements.Block;
+import org.joost.games.mazegame.entities.elements.Field;
+import org.joost.games.mazegame.entities.elements.Finish;
+import org.joost.games.mazegame.entities.elements.Start;
+import org.joost.games.mazegame.entities.elements.Tile;
 
 public class FieldReader {
 

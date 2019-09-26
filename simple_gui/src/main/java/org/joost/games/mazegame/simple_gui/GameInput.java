@@ -1,13 +1,13 @@
 package org.joost.games.mazegame.simple_gui;
 
-import static org.joost.games.mazegame.entities.Direction.*;
+import static org.joost.games.mazegame.entities.participants.Direction.*;
 
 import java.util.Scanner;
 
-import org.joost.games.mazegame.entities.DeelnemerKilledListener;
-import org.joost.games.mazegame.entities.Field;
-import org.joost.games.mazegame.entities.FinishedListener;
-import org.joost.games.mazegame.entities.Npc;
+import org.joost.games.mazegame.entities.participants.DeelnemerKilledListener;
+import org.joost.games.mazegame.entities.elements.Field;
+import org.joost.games.mazegame.entities.elements.FinishedListener;
+import org.joost.games.mazegame.entities.participants.Npc;
 
 public class GameInput implements FinishedListener, DeelnemerKilledListener {
 
